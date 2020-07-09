@@ -4,6 +4,13 @@ public class BinaryString {
      * а возвращает String с представлением этого числа в двоичном виде.
      */
     public String toBinaryString(int value) {
-        return Integer.toBinaryString(value);
+        StringBuilder binaryValue = new StringBuilder();
+
+        while (value >= 1) {
+            binaryValue.append(value % 2);
+            value = value / 2;
+        }
+
+        return (binaryValue.length() == 0 ? "0" : binaryValue.reverse().toString());
     }
 }
