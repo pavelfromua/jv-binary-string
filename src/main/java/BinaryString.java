@@ -4,19 +4,19 @@ public class BinaryString {
      * а возвращает String с представлением этого числа в двоичном виде.
      */
     public String toBinaryString(int value) {
-        String sBinary;
+        String binaryValue;
 
         if (value == 0) {
-            sBinary = "0";
+            binaryValue = "0";
         } else {
-            sBinary = "";
+            binaryValue = "";
 
             while (value >= 1) {
-                sBinary = String.valueOf(value % 2) + sBinary;
+                binaryValue = String.valueOf(value % 2) + binaryValue;
                 value = value / 2;
             }
         }
 
-        return sBinary;
+        return binaryValue;
     }
 }
