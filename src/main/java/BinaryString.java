@@ -6,11 +6,11 @@ public class BinaryString {
     public String toBinaryString(int value) {
         StringBuilder binaryValue = new StringBuilder();
 
-        while (value >= 1) {
+        do {
             binaryValue.append(value % 2);
             value = value / 2;
-        }
+        } while (value >= 1);
 
-        return (binaryValue.length() == 0 ? "0" : binaryValue.reverse().toString());
+        return binaryValue.reverse().toString();
     }
 }
